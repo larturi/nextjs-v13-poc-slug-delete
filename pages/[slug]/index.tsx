@@ -4,10 +4,12 @@ interface LandingTypes {
    slug: string;
 }
 
-const Home: NextPage = () => {
+const Home: NextPage<LandingTypes> = ({ slug }) => {
    return (
       <div style={{ paddingLeft: '3rem' }}>
          <h1>Smarthome</h1>
+         <hr />
+         <h3>Slug: {slug}</h3>
       </div>
    );
 };
